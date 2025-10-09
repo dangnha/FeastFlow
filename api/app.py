@@ -75,24 +75,25 @@ async def predict_churn(request: PredictionRequest):
     try:
         # Get features from Feast online store
         feature_vector = store.get_online_features(
-            features=[
-                "customer_demographics:gender",
-                "customer_demographics:SeniorCitizen",
-                "customer_demographics:Partner", 
-                "customer_demographics:Dependents",
-                "customer_demographics:total_services",
-                "customer_financials:tenure",
-                "customer_financials:MonthlyCharges",
-                "customer_financials:TotalCharges",
-                "customer_financials:customer_tenure_ratio",
-                "customer_financials:monthly_charge_avg",
-                "customer_contract:InternetService_DSL",
-                "customer_contract:InternetService_Fiber optic", 
-                "customer_contract:InternetService_No",
-                "customer_contract:Contract_Month-to-month",
-                "customer_contract:Contract_One year",
-                "customer_contract:Contract_Two year",
-            ],
+            # features=[
+            #     "customer_demographics:gender",
+            #     "customer_demographics:SeniorCitizen",
+            #     "customer_demographics:Partner", 
+            #     "customer_demographics:Dependents",
+            #     "customer_demographics:total_services",
+            #     "customer_financials:tenure",
+            #     "customer_financials:MonthlyCharges",
+            #     "customer_financials:TotalCharges",
+            #     "customer_financials:customer_tenure_ratio",
+            #     "customer_financials:monthly_charge_avg",
+            #     "customer_contract:InternetService_DSL",
+            #     "customer_contract:InternetService_Fiber optic", 
+            #     "customer_contract:InternetService_No",
+            #     "customer_contract:Contract_Month-to-month",
+            #     "customer_contract:Contract_One year",
+            #     "customer_contract:Contract_Two year",
+            # ],
+            features=store.get_feature_service("churn_service_v1"),
             entity_rows=[{"customerID": request.customerID}]
         ).to_dict()
         
