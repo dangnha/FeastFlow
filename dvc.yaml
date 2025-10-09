@@ -19,7 +19,7 @@ stages:
     deps:
       - scripts/setup_feast.py
       - data/processed/telco_churn_processed.parquet
-      - feature_repo/feature_store
+      - feature_repo/
 
   train:
     cmd: python scripts/train_model.py

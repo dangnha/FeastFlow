@@ -14,7 +14,7 @@ def get_training_data():
     from feast import FeatureStore
     
     # Initialize feature store
-    store = FeatureStore(repo_path="feature_repo/feature_store")
+    store = FeatureStore(repo_path="feature_repo/")
     
     # Get list of customer entities
     entity_df = pd.read_parquet("data/processed/telco_churn_processed.parquet")

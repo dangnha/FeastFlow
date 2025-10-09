@@ -1,59 +1,0 @@
-
-U
-5
-customerA telco customer"
-customerIDJtelco_churn
-à†‘Ç˜Öı²à†‘Ç˜Öı²
-B
-"
-__dummy"
-__dummy_idJtelco_churn
-à†‘Ç˜Öı²à†‘Ç˜Öı²1"$7dac6783-4d73-4593-8459-01656a8df1a2*ê†‘Ç¨€ó“2‰
-×
-customer_contracttelco_churncustomer"
-InternetService_DSL"
-InternetService_Fiber optic"
-InternetService_No"
-Contract_Month-to-month"
-Contract_One year"
-Contract_Two year"+
-'PaymentMethod_Bank transfer (automatic)")
-%PaymentMethod_Credit card (automatic)""
-PaymentMethod_Electronic check"
-PaymentMethod_Mailed check*
-teamcontract2€ç„:Æevent_timestamp*created_timestampZ42../../data/processed/telco_churn_processed.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢customer_data_source’à†‘ÇàÛ™"à†‘ÇÀÙÀ²@b
-
-customerID-
-à†‘ÇÀÙÀ²é†‘Ç˜Û•k
-€È¬á†‘Ç2¹
-‡
-customer_financialstelco_churncustomer"
-
-tenure"
-MonthlyCharges"
-TotalCharges"
-customer_tenure_ratio"
-monthly_charge_avg*
-team
-financials2€ÎÚ:Æevent_timestamp*created_timestampZ42../../data/processed/telco_churn_processed.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢customer_data_source’à†‘ÇàÛ™"à†‘ÇÀÙÀ²@b
-
-customerID-
-à†‘ÇÀÙÀ²ê†‘Ç°Ã·
-€È¬á†‘Ç2©
-ö
-customer_demographicstelco_churncustomer"
-
-gender"
-SeniorCitizen"
-Partner"
-
-Dependents"
-total_services*
-teamdemographics2€ç„:Æevent_timestamp*created_timestampZ42../../data/processed/telco_churn_processed.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢customer_data_source’à†‘ÇàÛ™"à†‘ÇÀÙÀ²@b
-
-customerID.
-à†‘Ç˜Öı²ê†‘Ç¨€ó“
-€È¬á†‘ÇbÔevent_timestamp*created_timestampZ42../../data/processed/telco_churn_processed.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢customer_data_sourceªtelco_churn’à†‘ÇàÛ™"à†‘ÇÀÙÀ²Š-
-
-telco_churn
-à†‘ÇØğÔšà†‘ÇØğÔš

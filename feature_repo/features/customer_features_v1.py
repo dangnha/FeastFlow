@@ -1,8 +1,6 @@
 from datetime import timedelta
 from feast import Entity, FeatureView, Field, FileSource
-from feast.types import Float32, Float64, Int64, Bool
-from feast.value_type import ValueType
-import pandas as pd
+from feast.types import Float32, Int64
 
 # Define the primary entity
 customer = Entity(
@@ -14,14 +12,14 @@ customer = Entity(
 # Define the data source
 customer_data_source = FileSource(
     name="customer_data_source",
-    path=r"../../data/processed/telco_churn_processed.parquet",
+    path=r"../data/processed/telco_churn_processed.parquet",
     timestamp_field="event_timestamp",
     created_timestamp_column="created_timestamp",
 )
 
 # Define feature views
-customer_demographics_fv = FeatureView(
-    name="customer_demographics",
+customer_demographics_fv_v1 = FeatureView(
+    name="customer_demographics_v1",
     entities=[customer],
     ttl=timedelta(days=365),
     schema=[
@@ -36,8 +34,8 @@ customer_demographics_fv = FeatureView(
     tags={"team": "demographics"},
 )
 
-customer_financials_fv = FeatureView(
-    name="customer_financials",
+customer_financials_fv_v1 = FeatureView(
+    name="customer_financials_v1",
     entities=[customer],
     ttl=timedelta(days=90),
     schema=[
@@ -52,8 +50,8 @@ customer_financials_fv = FeatureView(
     tags={"team": "financials"},
 )
 
-customer_contract_fv = FeatureView(
-    name="customer_contract",
+customer_contract_fv_v1 = FeatureView(
+    name="customer_contract_v1",
     entities=[customer],
     ttl=timedelta(days=365),
     schema=[
