@@ -23,24 +23,7 @@ def get_training_data():
     # Get training data from Feast
     training_df = store.get_historical_features(
         entity_df=entity_df,
-        features=[
-            "customer_demographics:gender",
-            "customer_demographics:SeniorCitizen", 
-            "customer_demographics:Partner",
-            "customer_demographics:Dependents",
-            "customer_demographics:total_services",
-            "customer_financials:tenure",
-            "customer_financials:MonthlyCharges",
-            "customer_financials:TotalCharges",
-            "customer_financials:customer_tenure_ratio",
-            "customer_financials:monthly_charge_avg",
-            "customer_contract:InternetService_DSL",
-            "customer_contract:InternetService_Fiber optic",
-            "customer_contract:InternetService_No",
-            "customer_contract:Contract_Month-to-month",
-            "customer_contract:Contract_One year",
-            "customer_contract:Contract_Two year",
-        ]
+        features=store.get_feature_service("churn_service_v1")
     ).to_df()
     
     # Merge with target variable
@@ -66,7 +49,7 @@ def train_churn_model():
     
     # Split the data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
-    
+
     print(f"Training on {len(X_train)} samples, testing on {len(X_test)} samples")
     print(f"Feature count: {len(feature_columns)}")
     

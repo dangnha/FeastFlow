@@ -2,7 +2,7 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, UTC
 
 # --- Configuration ---
 # Set the path to the Feast feature repository root
@@ -67,9 +67,7 @@ def materialize_features():
     """Materialize features to online store"""
     print("Materializing features to online store...")
     try:
-        # Materialize features from 2024-01-01 up to the current time ('now')
-        # Using 'now' ensures all data, including today's, is included.
-        now = datetime.utcnow().isoformat(timespec='seconds')
+        now = datetime.now(UTC).isoformat(timespec='seconds')
         result = subprocess.run(
             ["feast", "materialize", "2024-01-01", now],
             cwd=FEATURE_REPO_PATH,
