@@ -133,7 +133,7 @@ Features:
 🔧 **Development**  
 **Adding New Features**:
 
-1. Update `feature_repo/feature_store/features.py`.
+1. Update `feature_repo/features.py`.
 2. Apply changes: `feast apply`.
 3. Materialize to the online store: `feast materialize`.
 

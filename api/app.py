@@ -35,7 +35,7 @@ except Exception as e:
     feature_names = []
 
 # Initialize Feast feature store
-store = FeatureStore(repo_path="feature_repo/feature_store")
+store = FeatureStore(repo_path="feature_repo")
 
 class PredictionRequest(BaseModel):
     customerID: str

@@ -6,7 +6,7 @@ from datetime import datetime
 
 # --- Configuration ---
 # Set the path to the Feast feature repository root
-FEATURE_REPO_PATH = Path("feature_repo/feature_store") 
+FEATURE_REPO_PATH = Path("feature_repo") 
 # ---------------------
 
 def setup_redis():

@@ -14,7 +14,7 @@ customer = Entity(
 # Define the data source
 customer_data_source = FileSource(
     name="customer_data_source",
-    path=r"../../data/processed/telco_churn_processed.parquet",
+    path=r"../data/processed/telco_churn_processed.parquet",
     timestamp_field="event_timestamp",
     created_timestamp_column="created_timestamp",
 )
